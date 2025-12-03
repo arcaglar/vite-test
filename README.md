@@ -46,8 +46,7 @@ Modern, responsive ve type-safe bir otobüs bileti rezervasyon sistemi. React 18
 
 ### 1. Projeyi Klonlayın
 ```bash
-git clone <repo-url>
-cd fr-case
+git clone https://github.com/arcaglar/vite-test.git
 ```
 
 ### 2. Bağımlılıkları Yükleyin
