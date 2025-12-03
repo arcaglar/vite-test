@@ -474,10 +474,8 @@ POST /api/tickets/sell
 
 ## 🧪 Test
 
-### Test Coverage
-
 ```bash
-npm run test:coverage
+npm run test
 ```
 
 **Kapsanan Testler:**
