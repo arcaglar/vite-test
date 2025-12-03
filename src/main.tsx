@@ -10,11 +10,19 @@ async function enableMocking() {
 
   try {
     const { worker } = await import('./api/mocks/browser')
-    return await worker.start({
+    
+    await worker.start({
       onUnhandledRequest: 'bypass',
+      serviceWorker: {
+        url: '/mockServiceWorker.js',
+      },
+      quiet: false,
     })
+    
+    console.log('🎭 MSW Started - Mock API is active')
+    console.log('📍 Environment:', import.meta.env.MODE)
   } catch (error) {
-    console.error('Failed to enable mocking:', error)
+    console.error('❌ Failed to start MSW:', error)
     return Promise.resolve() 
   }
 }
