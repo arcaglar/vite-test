@@ -29,13 +29,19 @@ const localStorageMock = {
   key: vi.fn(),
 };
 
-global.localStorage = localStorageMock as Storage;
+Object.defineProperty(globalThis, 'localStorage', {
+  value: localStorageMock,
+  writable: true,
+});
 
 vi.mock('canvas-confetti', () => ({
   default: vi.fn(),
 }));
 
-global.print = vi.fn();
+Object.defineProperty(globalThis, 'print', {
+  value: vi.fn(),
+  writable: true,
+});
 
 beforeAll(() => server.listen({ onUnhandledRequest: 'warn' }));
 afterEach(() => {
