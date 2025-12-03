@@ -516,8 +516,6 @@ export const renderWithProviders = (ui) => {
 
 ## 🚧 Geliştirme Notları
 
-### ✅ Bonus
-
 1. **Dark/Light Theme**
    - Sistema uyumlu otomatik başlangıç
    - localStorage persistence
